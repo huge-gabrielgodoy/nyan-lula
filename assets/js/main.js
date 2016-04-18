@@ -43,18 +43,18 @@ window.onload = () => {
         Intervals
         */
 
-        // animRainbow = setInterval(() => {
-        //     createRainbowPart();
-        //     var rainbowParts = document.querySelectorAll('.part'),
-        //         rainbowNewLeft;
-        //     for (var i = 0, partLength = rainbowParts.length; i < partLength; i++) {
-        //         rainbowNewLeft = (rainbowParts[i].style.left.replace('px', '') - 20) + 'px';
-        //         rainbowParts[i].style.left = rainbowNewLeft;
-        //         if (rainbowParts[i].offsetLeft < -10) {
-        //             document.body.removeChild(rainbowParts[i]);
-        //         }
-        //     }
-        // }, 30);
+         animRainbow = setInterval(() => {
+             createRainbowPart();
+             var rainbowParts = document.querySelectorAll('.part'),
+                 rainbowNewLeft;
+             for (var i = 0, partLength = rainbowParts.length; i < partLength; i++) {
+                 rainbowNewLeft = (rainbowParts[i].style.left.replace('px', '') - 20) + 'px';
+                 rainbowParts[i].style.left = rainbowNewLeft;
+                 if (rainbowParts[i].offsetLeft < -10) {
+                     document.body.removeChild(rainbowParts[i]);
+                 }
+             }
+         }, 30);
 
         function restartGame() {
             startGame();
